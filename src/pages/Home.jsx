@@ -1,14 +1,15 @@
 import React from "react";
 import { Image, Box, Stack, Heading } from "@chakra-ui/react";
-import ImageClient from "../assets/img/button.png";
 import ImageClick from "../assets/img/cursor.png";
+import ImageClient from "../assets/img/button.png";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-    const navigate = useNavigate();
-    const buttonStart=()=>{
-navigate("/surtidor")
-    }
+  const navigate = useNavigate();
+
+  const buttonStart = () => {
+    navigate("/surtidor");
+  };
   return (
     <Box w="100%">
       <Stack
@@ -31,14 +32,14 @@ navigate("/surtidor")
           onClick={buttonStart}
         >
           <div>
-            <Heading fontSize="6xl" color="white">
+            <Heading fontSize="5xl" color="white">
               Empezar
             </Heading>
             <Heading fontSize="4xl" color="white">
-              Pulsa aqui
+              Pulsa aquí
             </Heading>
           </div>
-          <Image src={ImageClick} alt="Click Here" width="150px" />
+         <Image src={ImageClick} alt="Click Here" width="90px" />
         </Box>
         <Box
           p={5}
@@ -50,8 +51,8 @@ navigate("/surtidor")
           cursor="pointer"
           borderRadius="10"
         >
-            <Heading fontSize="4xl">Identificarse como cliente</Heading>
-          <Image src={ImageClient} alt="Client" width="100px" />
+          <Heading fontSize="5xl">Identificarse Cliente</Heading>
+          <Image src={ImageClient} alt="Client" width="40px" />
         </Box>
       </Stack>
     </Box>
