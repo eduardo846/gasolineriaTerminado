@@ -4,6 +4,7 @@ import ImageCar from "../assets/img/car.png";
 import { useNavigate } from "react-router-dom";
 
 const Surtidor = () => {
+  const navigate = useNavigate();
   const surtidores = [
     {
       id: 1,
@@ -30,12 +31,18 @@ const Surtidor = () => {
       name: "surtidor6",
     },
   ];
+
+  const clickSurtidor = (id) => {
+    localStorage.setItem("suridor", id);
+    navigate("/product");
+  };
+
   return (
     <>
       <Heading textAlign="center" marginBottom="5">
         Selecciona el surtidor
       </Heading>
-      <Grid templateColumns="repeat(2,1fr)" gap={9}>
+      <Grid templateColumns="repeat(2, 1fr)" gap={9}>
         {surtidores.map((surtidor) => (
           <GridItem
             key={surtidor.id}
@@ -53,6 +60,7 @@ const Surtidor = () => {
               color: "#fff",
               shadow: "2xl",
             }}
+            onClick={() => clickSurtidor(surtidor.id)}
           >
             <Heading size="lg" textTransform="uppercase">
               {surtidor.name}
