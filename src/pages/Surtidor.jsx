@@ -48,9 +48,9 @@ const Surtidor = () => {
             key={surtidor.id}
             w="100%"
             h="40"
-            margin="5"
+            margin="1"
             borderRadius="10"
-            padding="4"
+            padding="0"
             cursor="pointer"
             textAlign="center"
             boxShadow="0px 4px 10px -3px rgb(117 117 177)"
