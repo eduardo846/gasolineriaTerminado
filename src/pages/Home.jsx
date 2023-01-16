@@ -41,7 +41,19 @@ const Home = () => {
           </div>
          <Image src={ImageClick} alt="Click Here" width="90px" />
         </Box>
-      
+        <Box
+          p={5}
+          shadow="md"
+          borderWidth="1px"
+          display="flex"
+          justifyContent="space-around"
+          alignItems="center"
+          cursor="pointer"
+          borderRadius="10"
+        >
+          <Heading fontSize="5xl">Identificarse Cliente</Heading>
+          <Image src={ImageClient} alt="Client" width="40px" />
+        </Box>
       </Stack>
     </Box>
   );
