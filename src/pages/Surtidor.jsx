@@ -33,7 +33,7 @@ const Surtidor = () => {
   ];
 
   const clickSurtidor = (id) => {
-    localStorage.setItem("suridor", id);
+    localStorage.setItem("surtidor", id);
     navigate("/product");
   };
 
